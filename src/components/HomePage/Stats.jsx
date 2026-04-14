@@ -9,7 +9,7 @@ const Stats = () => {
     ]
     return (
         <div className='bg-base-200 pb-10'>
-            <div className='max-w-6xl mx-auto'>
+            <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-4 gap-5 text-center'>
                     {
                         statsData.map((stat, index) => (
@@ -21,6 +21,7 @@ const Stats = () => {
                         ))
                     }
                 </div>
+                <div className='border border-gray-200 my-10'></div>
             </div>
         </div>
     );

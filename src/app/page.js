@@ -1,3 +1,4 @@
+import Friends from "@/components/Friends/Friends";
 import Banner from "@/components/HomePage/Banner";
 import Stats from "@/components/HomePage/Stats";
 import Image from "next/image";
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <Banner />
       <Stats />
+      <Friends />
     </div>
   );
 }
