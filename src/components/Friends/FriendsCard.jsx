@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 const FriendsCard = ({ friend, children }) => {
-    console.log('children', children)
+    // console.log('children', children)
     const { id, name, picture, days_since_contact, tags, status } = friend;
     return (
         <div>

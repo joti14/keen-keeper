@@ -1,12 +1,9 @@
 import FriendsCard from '@/components/Friends/FriendsCard';
 import QuickCheckIn from '@/components/Friends/QuickCheckIn';
-import Link from 'next/link';
 import React from 'react';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import { HiOutlineBellSnooze } from 'react-icons/hi2';
-import { PiArchive, PiPhoneCallBold, PiVideoCameraBold } from 'react-icons/pi';
-import { RiMessage2Line } from 'react-icons/ri';
-import { toast } from 'react-toastify';
+import { PiArchive } from 'react-icons/pi';
 
 
 const FriendsDetailsPage = async ({ params }) => {
