@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Stats = () => {
+const Stats = ({friend}) => {
+    const totalFriends = friend?.length || 0
+    const onTrack = friend?.filter(f=> f.status === 'On-Track').length
+    
     const statsData = [
-        { value: 10, label: 'Total Friends' },
-        { value: 10, label: 'On Track' },
+        { value: totalFriends, label: 'Total Friends' },
+        { value: onTrack, label: 'On Track' },
         { value: 10, label: 'Need Attention' },
         { value: 10, label: 'Interations This Month' },
     ]

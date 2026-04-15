@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import React from 'react';
 
-const FriendsCard = ({friend}) => {
-    const {id, name, picture, days_since_contact, tags, status} = friend;
+const FriendsCard = ({ friend, children }) => {
+    console.log('children', children)
+    const { id, name, picture, days_since_contact, tags, status } = friend;
     return (
         <div>
 
-            <div className="card bg-base-100  shadow-sm">
+            <div className="card bg-base-100 shadow-sm  hover:shadow-md 
+                hover:scale-105 transition-all cursor-pointer">
                 <figure className="px-10 pt-10">
                     <Image
                         src={picture}
@@ -33,6 +35,7 @@ const FriendsCard = ({friend}) => {
                             {status}
                         </div>
                     </div>
+                    {children}
                 </div>
             </div>
         </div>
