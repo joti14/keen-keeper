@@ -9,7 +9,6 @@ const QuickCheckIn = ({ friend }) => {
     const { quickCheckIn, setQuickCheckIn } = useContext(quickCheckInContext);
     // console.log(quickCheckIn, 'checked in');
 
-
     const { name, picture, days_since_contact, tags, status, bio, goal, next_due_date } = friend;
 
     const handleCheckIn = (type) => {
