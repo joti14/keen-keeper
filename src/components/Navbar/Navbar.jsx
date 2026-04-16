@@ -17,12 +17,21 @@ const Navbar = () => {
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <Link href='/'>
-                        <Image src={logo} alt='logo' width={150} height={150} ></Image>
+                        <Image
+                            src={logo}
+                            alt='logo'
+                            width={150}
+                            height={150}
+                        ></Image>
                     </Link>
                 </div>
-                <div className="navbar-end gap-2">
+                <div className="navbar-end gap-1 sm:gap-2">
                     {
-                        navLinks.map((link, index) => <NavLink key={index} href={link.href}>{link.icon}{link.label}</NavLink>)
+                        navLinks.map((link, index) => 
+                        <NavLink key={index} href={link.href}>
+                            <span className="text-lg">{link.icon}</span>
+                            <span className="hidden sm:inline text-sm md:text-base">{link.label}</span>
+                        </NavLink>)
                     }
                 </div>
             </div>

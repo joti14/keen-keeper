@@ -24,24 +24,24 @@ const QuickCheckIn = ({ friend }) => {
     return (
         <div>
             <h3 className="font-bold text-lg mb-3 text-[#244D3F]">Quick Check-In</h3>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-3 gap-1 sm:gap-3">
                 <button
-                    className="btn flex flex-col items-center h-25 text-xl text-gray-600 w-full"
+                    className="btn flex flex-col items-center h-16 sm:h-25 text-sm sm:text-xl text-gray-600 w-full"
                     onClick={() => handleCheckIn('Call')}
                 >
-                    <PiPhoneCallBold className='text-3xl text-gray-800' /> Call
+                    <PiPhoneCallBold className='text-xl sm:text-3xl text-gray-800' /> Call
                 </button>
                 <button
-                    className="btn flex flex-col items-center h-25 text-xl text-gray-600 w-full"
+                    className="btn flex flex-col items-center h-16 sm:h-25 text-sm sm:text-xl text-gray-600 w-full"
                     onClick={() => handleCheckIn('Text')}
                 >
-                    <RiMessage2Line className='text-3xl text-gray-800' /> Text
+                    <RiMessage2Line className='text-xl sm:text-3xl text-gray-800' /> Text
                 </button>
                 <button
-                    className="btn flex flex-col items-center h-25 text-xl text-gray-600 w-full"
+                    className="btn flex flex-col items-center h-16 sm:h-25 text-sm sm:text-xl text-gray-600 w-full"
                     onClick={() => handleCheckIn('Video')}
                 >
-                    <PiVideoCameraBold className='text-3xl text-gray-800' /> Video
+                    <PiVideoCameraBold className='text-xl sm:text-3xl text-gray-800' /> Video
                 </button>
             </div>
         </div>

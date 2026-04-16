@@ -15,19 +15,19 @@ const StatsPage = () => {
 
     const data = [
         { name: 'Call', value: counts.Call || 0, fill: '#244D3F' },
-        { name: 'Text', value: counts.Text || 0, fill: '#4CAF50' },
-        { name: 'Video', value: counts.Video || 0, fill: '#81C784' },
+        { name: 'Text', value: counts.Text || 0, fill: '#7F37F5' },
+        { name: 'Video', value: counts.Video || 0, fill: '#4CAF50' },
     ].filter(item => item.value > 0);
 
     return (
-        <div className='max-w-7xl mx-auto'>
-            <h2 className="font-bold text-3xl mt-15 ">
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <h2 className="font-bold text-xl sm:text-3xl mt-8 sm:mt-15">
                 Friendship Analytics
             </h2>
-            <div className="my-10 shadow p-10 rounded-md border border-slate-300">
-                <h2 className='text-xl font-medium text-gray-700'>By Interaction Type</h2>
+            <div className="my-6 sm:my-10 shadow p-4 sm:p-6 lg:p-10 rounded-md border border-slate-300">
+                <h2 className='text-base sm:text-xl font-medium text-gray-700'>By Interaction Type</h2>
                 {quickCheckIn.length === 0 ? (
-                    <p className="text-gray-400 text-center text-lg py-20">
+                    <p className="text-gray-400 text-center text-base sm:text-lg py-10 sm:py-20">
                         No check-in data yet!
                     </p>
                 ) : (
@@ -51,15 +51,8 @@ const StatsPage = () => {
                                 dataKey="value"
                                 isAnimationActive={true}
                             />
-                            <Legend iconType="circle" />
-                            <Tooltip
-                                formatter={(value, name) => [`${value} check-ins`, name]}
-                                contentStyle={{
-                                    borderRadius: '12px',
-                                    border: 'none',
-                                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                                }}
-                            />
+                            <Legend />
+                            <Tooltip />
                         </PieChart>
                     </div>
                 )}

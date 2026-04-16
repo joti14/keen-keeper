@@ -5,11 +5,10 @@ const FriendsCard = ({ friend, children }) => {
     // console.log('children', children)
     const { id, name, picture, days_since_contact, tags, status } = friend;
     return (
-        <div>
+        <div className='h-full'>
 
-            <div className="card bg-base-100 shadow-sm  hover:shadow-md 
-                hover:scale-105 transition-all cursor-pointer">
-                <figure className="px-10 pt-10">
+            <div className="card bg-base-100 shadow-sm hover:shadow-md hover:scale-105 transition-all cursor-pointer h-full">
+                <figure className="px-6 pt-6 sm:px-10 sm:pt-10">
                     <Image
                         src={picture}
                         alt={name}
@@ -17,11 +16,11 @@ const FriendsCard = ({ friend, children }) => {
                         width='100'
                         className="rounded-full" />
                 </figure>
-                <div className="card-body items-center text-center">
-                    <h2 className="card-title text-xl font-semibold">{name}</h2>
+                <div className="card-body items-center text-center p-4 sm:p-8">
+                    <h2 className="card-title text-lg sm:text-xl font-semibold">{name}</h2>
                     <p className='text-gray-400'>{days_since_contact}d ago</p>
                     <div className="flex flex-col items-center gap-2">
-                        <div className='flex gap-2'>
+                        <div className='flex flex-wrap justify-center gap-2'>
                             {
                                 tags.map((tag, index) =>
                                     <div key={index} className="badge font-medium rounded-full text-gray-600 bg-[#CBFADB]">{tag.toUpperCase()}</div>)

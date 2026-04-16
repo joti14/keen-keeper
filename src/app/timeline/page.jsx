@@ -15,13 +15,13 @@ const TimelinePage = () => {
     return (
         <div>
             {quickCheckIn.length === 0 ? (
-                <h2 className='text-2xl font-bold flex justify-center items-center text-[#244D3F] p-30'>
+                <h2 className='text-xl sm:text-2xl font-bold flex justify-center items-center text-[#244D3F] p-8 sm:p-30'>
                     No one check-ins yet!
                 </h2>
             ) : (
-                <div className='max-w-5xl mx-auto mt-20'>
+                <div className='max-w-7xl mx-auto mt-8 sm:mt-20 px-4 sm:px-6 lg:px-8'>
                     <fieldset className="fieldset">
-                        <legend className="fieldset-legend text-3xl font-bold mb-2">
+                        <legend className="fieldset-legend text-xl sm:text-3xl font-bold mb-2">
                             Timeline
                         </legend>
 
