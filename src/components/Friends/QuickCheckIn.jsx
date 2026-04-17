@@ -23,7 +23,7 @@ const QuickCheckIn = ({ friend }) => {
     
     return (
         <div>
-            <h3 className="font-bold text-lg mb-3 text-[#244D3F]">Quick Check-In</h3>
+            <h3 className="font-bold text-base sm:text-lg mb-3 text-[#244D3F]">Quick Check-In</h3>
             <div className="grid grid-cols-3 gap-1 sm:gap-3">
                 <button
                     className="btn flex flex-col items-center h-16 sm:h-25 text-sm sm:text-xl text-gray-600 w-full"

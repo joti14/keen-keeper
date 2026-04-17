@@ -24,7 +24,7 @@ const FriendsDetailsPage = async ({ params }) => {
                         <p className='text-gray-400 text-sm'>Preferred: email</p>
                     </FriendsCard>
                     {/* Action Buttons */}
-                    <div className="grid grid-cols-3 sm:grid-cols-1 gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 gap-2">
                         <button className="btn w-full"><HiOutlineBellSnooze className='text-xl' /> Snooze 2 Weeks</button>
                         <button className="btn w-full"><PiArchive className='text-xl' /> Archive</button>
                         <button className="btn w-full text-red-500"><FaRegTrashAlt className='text-xl' /> Delete</button>
@@ -35,28 +35,28 @@ const FriendsDetailsPage = async ({ params }) => {
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-2 sm:gap-3">
                         <div className="card bg-base-100 shadow-sm text-center p-2 sm:p-4 justify-center h-full">
-                            <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold text-[#244D3F]">{days_since_contact}</h2>
-                            <p className="text-gray-400">Days Since Contact</p>
+                            <h2 className="text-base sm:text-2xl lg:text-3xl font-bold text-[#244D3F]">{days_since_contact}</h2>
+                            <p className="text-sm sm:text-base text-gray-400">Days Since Contact</p>
                         </div>
                         <div className="card bg-base-100 shadow-sm text-center p-2 sm:p-4 justify-center h-full">
-                            <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold text-[#244D3F]">{goal}</h2>
-                            <p className="text-gray-400">Goal (Days)</p>
+                            <h2 className="text-base sm:text-2xl lg:text-3xl font-bold text-[#244D3F]">{goal}</h2>
+                            <p className="text-sm sm:text-base text-gray-400">Goal (Days)</p>
                         </div>
                         <div className="card bg-base-100 shadow-sm text-center p-2 sm:p-4 justify-center h-full">
-                            <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold text-[#244D3F]">{new Date(next_due_date).toLocaleDateString('en-us', {
+                            <h2 className="text-base sm:text-2xl lg:text-3xl font-bold text-[#244D3F]">{new Date(next_due_date).toLocaleDateString('en-us', {
                                 month: 'short', day: 'numeric', year: 'numeric'
                             })}</h2>
-                            <p className="text-gray-400">Next Due</p>
+                            <p className="text-sm sm:text-base text-gray-400">Next Due</p>
                         </div>
                     </div>
 
                     {/* Relationship Goal */}
                     <div className="card bg-base-100 shadow-sm p-4 justify-center h-full">
                         <div className="flex justify-between items-center">
-                            <h3 className="font-bold text-lg text-[#244D3F]">Relationship Goal</h3>
+                            <h3 className="font-bold text-base sm:text-lg text-[#244D3F]">Relationship Goal</h3>
                             <button className="btn btn-sm">Edit</button>
                         </div>
-                        <p>Connect every <strong>30 days</strong></p>
+                        <p className='text-sm sm:text-base'>Connect every <strong>30 days</strong></p>
                     </div>
 
                     {/* Quick Check-In */}
